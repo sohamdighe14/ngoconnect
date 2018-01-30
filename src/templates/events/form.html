@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head_title %} Register | {{ block.super}}{% endblock head_title %}
+{% block content %}
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+    <h1>User Registration</h1>
+    <!-- {% if form.errors %}
+    {{form.errors}}
+    {% endif %} -->
+    {% include 'snippets/form-snippet.html' %}
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head_title %} Donation Details | {{ block.super}}{% endblock head_title %}
+{% block content %}
+<h1>Donation Details</h1>
+<ul>
+    {% for obj in object_list  %}
+       <li><a href="{{ obj.get_absolute_url }}">{{obj}}</a></br>
+           {{ obj.name }} {{ obj.amount }} {{ obj.timestamp }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
